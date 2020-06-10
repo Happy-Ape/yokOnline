@@ -1,0 +1,14 @@
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\client\CourseClient.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\mq\ChooseCourseTask.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\dao\XcLearningNotesRepository.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\dao\XcLearningCourseRepository.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\LearningApplication.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\dao\LearningCourseMapper.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\dao\XcLearningCommentRepository.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\controller\CourseLearningController.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\service\LearningService.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\dao\XcLearningCollectionRepository.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\client\CourseSearchClient.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\config\RabbitMQConfig.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\dao\XcLearningQuestionRepository.java
+E:\IdeaProjects\yokStudy\xc-service-learning\src\main\java\com\yok\learning\dao\XcTaskHisRepository.java

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yok.order.dao.XcOrdersMapper">
+    <select id="findByCourseidAndUserAndStatus" parameterType="java.lang.String"
+            resultType="com.yok.framework.domain.order.XcOrders">
+        select order_number orderNumber,initial_price initialPrice,price,start_time startTime,end_time endTime,status,user_id userId,details
+        from xc_orders t
+        where order_number
+        in
+        (select x.order_number from xc_orders_detail x where x.course_id=#{courseId})
+        and t.user_id=#{userId}
+        and t.status=#{status}
+    </select>
+</mapper>

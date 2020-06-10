@@ -1,0 +1,14 @@
+com\yok\learning\dao\XcLearningCollectionRepository.class
+com\yok\learning\dao\LearningCourseMapper.class
+com\yok\learning\dao\XcLearningCommentRepository.class
+com\yok\learning\mq\ChooseCourseTask.class
+com\yok\learning\controller\CourseLearningController.class
+com\yok\learning\service\LearningService.class
+com\yok\learning\dao\XcLearningNotesRepository.class
+com\yok\learning\dao\XcTaskHisRepository.class
+com\yok\learning\dao\XcLearningCourseRepository.class
+com\yok\learning\client\CourseSearchClient.class
+com\yok\learning\config\RabbitMQConfig.class
+com\yok\learning\dao\XcLearningQuestionRepository.class
+com\yok\learning\LearningApplication.class
+com\yok\learning\client\CourseClient.class

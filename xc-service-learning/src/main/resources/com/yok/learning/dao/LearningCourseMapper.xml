@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yok.learning.dao.LearningCourseMapper">
+    <select id="getCouseScore" parameterType="java.lang.String" resultType="java.lang.Float">
+select avg(score) score from xc_learning_comment where course_id=#{courseId}
+</select>
+    <resultMap id="questionMap" type="com.yok.framework.domain.learning.QuestionNode">
+        <id column="one_id" property="id"></id>
+        <result column="one_user_id" property="userId"></result>
+        <result column="one_title" property="title"></result>
+        <result column="one_content" property="content"></result>
+        <result column="one_create_time" property="createTime"></result>
+        <collection property="children" ofType="com.yok.framework.domain.learning.QuestionNode">
+            <id column="two_id" property="id"></id>
+            <result column="two_user_id" property="userId"></result>
+            <result column="two_content" property="content"></result>
+            <result column="two_create_time" property="createTime"></result>
+        </collection>
+    </resultMap>
+
+    <select id="getMyQuestionList" parameterType="java.lang.String" resultMap="questionMap">
+        SELECT
+        a.id one_id,
+        a.user_id one_user_id,
+        a.title one_title,
+        a.content one_content,
+        a.create_time one_create_time,
+        b.id two_id,
+        b.user_id two_user_id,
+        b.content two_content,
+        b.create_time two_create_time
+        FROM
+        xc_learning_question a
+        LEFT JOIN xc_learning_question b
+        ON b.ask_id = a.id
+        WHERE a.ask_id = '0'
+            AND a.user_id = #{userId}
+            AND a.course_id = #{courseId}
+            AND a.teachplan_id = #{teachPlanId}
+        ORDER BY a.create_time DESC,
+        b.create_time DESC
+    </select>
+
+    <select id="getOtherQuestionList" parameterType="java.lang.String" resultMap="questionMap">
+        SELECT
+        a.id one_id,
+        a.user_id one_user_id,
+        a.title one_title,
+        a.content one_content,
+        a.create_time one_create_time,
+        b.id two_id,
+        b.user_id two_user_id,
+        b.content two_content,
+        b.create_time two_create_time
+        FROM
+        xc_learning_question a
+        LEFT JOIN xc_learning_question b
+        ON b.ask_id = a.id
+        WHERE a.ask_id = '0'
+            AND a.user_id != #{userId}
+            AND a.course_id = #{courseId}
+            AND a.teachplan_id = #{teachPlanId}
+        ORDER BY a.create_time DESC,
+        b.create_time DESC
+    </select>
+</mapper>

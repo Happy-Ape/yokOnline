@@ -1,0 +1,17 @@
+com\yok\api\media\MediaFileControllerApi.class
+com\yok\api\config\Swagger2Configuration.class
+com\yok\api\cms\CmsPageControllerApi.class
+com\yok\api\cms\CmsSiteControllerApi.class
+com\yok\api\filesystem\FileSystemControllerApi.class
+com\yok\api\order\OrderControllerApi.class
+com\yok\api\ucenter\UcenterControllerApi.class
+com\yok\api\course\SysDicthinaryControllerApi.class
+com\yok\api\search\EsCourseControllerApi.class
+com\yok\api\learning\CourseLearningControllerApi.class
+com\yok\api\order\AlipayControllerApi.class
+com\yok\api\auth\AuthControllerApi.class
+com\yok\api\course\CourseControllerApi.class
+com\yok\api\cms\CmsTemplateControllerApi.class
+com\yok\api\course\CategoryControllerApi.class
+com\yok\api\cms\CmsConfigControllerApi.class
+com\yok\api\media\MediaUploadControllerApi.class
